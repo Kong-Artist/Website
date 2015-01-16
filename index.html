@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+
+<!-- Meta Tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Kong Artist | A ninja in the Matrix</title>   
+
+<meta name="description" content="An introverted (gasp) software engineer at the University of Waterloo." /> 
+
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="MobileOptimized" content="320"/>   
+
+<!-- Mobile Internet Explorer ClearType Technology -->
+<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
+
+<!-- Bootstrap -->
+<link href="_include/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Main Style -->
+<link href="_include/css/main.css" rel="stylesheet">
+
+<!-- Supersized -->
+<link href="_include/css/supersized.css" rel="stylesheet">
+<link href="_include/css/supersized.shutter.css" rel="stylesheet">
+
+<!-- FancyBox -->
+<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+
+<!-- Font Icons -->
+<link href="_include/css/fonts.css" rel="stylesheet">
+
+<!-- Shortcodes -->
+<link href="_include/css/shortcodes.css" rel="stylesheet">
+
+<!-- Responsive -->
+<link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="_include/css/responsive.css" rel="stylesheet">
+
+<!-- Supersized -->
+<link href="_include/css/supersized.css" rel="stylesheet">
+<link href="_include/css/supersized.shutter.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+
+<!-- Fav Icon -->
+<link rel="shortcut icon" href="_include\img\icon.ico">
+
+<link rel="apple-touch-icon" href="#">
+<link rel="apple-touch-icon" sizes="114x114" href="#">
+<link rel="apple-touch-icon" sizes="72x72" href="#">
+<link rel="apple-touch-icon" sizes="144x144" href="#">
+
+<!-- Modernizr -->
+<script src="_include/js/modernizr.js"></script>
+
+<!-- Analytics -->
+<script type="text/javascript">
+
+//   var _gaq = _gaq || [];
+//   _gaq.push(['_setAccount', 'Insert Your Code']);
+//   _gaq.push(['_trackPageview']);
+
+//   (function() {
+//     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//   })();
+
+// </script>
+<!-- End Analytics -->
+
+</head>
+
+
+<body>
+
+<!-- This section is for Splash Screen -->
+<div class="ole">
+<section id="jSplash">
+	<div id="circle"></div>
+</section>
+</div>
+<!-- End of Splash Screen -->
+
+<!-- Homepage Slider -->
+<div id="home-slider">	
+    <div class="overlay"></div>
+
+    <div class="slider-text">
+    	<div id="slidecaption"></div>
+    </div>   
+	
+	<div class="control-nav">
+        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
+        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+        <ul id="slide-list"></ul>
+        
+        <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
+    </div>
+</div>
+<!-- End Homepage Slider -->
+
+<!-- Header -->
+<header>
+    <div class="sticky-nav">
+    	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+        
+<!--         <div id="logo">
+        	<a id="goUp" href="#home-slider" title="Kong Artist | A ninja in the Matrix">Kong Artist</a>
+        </div> -->
+        
+        <nav id="menu">
+        	<ul id="menu-nav">
+            	<li class="current"><a href="#home-slider">Home</a></li>
+                <!-- <li><a href="#blog">Blog</a></li> -->
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact</a></li>
+				<!-- <li><a href="shortcodes.html" class="external">Shortcodes</a></li> -->
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Our Work Section -->
+<div id="work" class="page">
+	<div class="container">
+    	<!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page">
+                    <h2 class="title">My Work</h2>
+                    <h3 class="title-description">Check Out My Projects!</h3>
+                </div>
+            </div>
+        </div>
+        <!-- End Title Page -->
+        
+        <!-- Portfolio Projects -->
+        <div class="row">
+        	<div class="span3">
+            	<!-- Filter -->
+                <nav id="options" class="work-nav">
+                    <ul id="filters" class="option-set" data-option-key="filter">
+                    	<li class="type-work">Type of Work</li>
+                        <li><a href="#filter" data-option-value="*" class="selected">All Projects</a></li>
+                        <li><a href="#filter" data-option-value=".programming">Programming</a></li>
+                        <li><a href="#filter" data-option-value=".photography">Photography</a></li>
+                    </ul>
+                </nav>
+                <!-- End Filter -->
+            </div>
+            
+            <div class="span9">
+            	<div class="row">
+                	<section id="projects">
+                    	<ul id="thumbs">
+                        
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 programming">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<a href ='http://scribblerplaystwitch.herokuapp.com/' target='_blank'>Twitch Plays ScribblerBot</a>" href="_include/img/work/full/image-01-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/image-01.png" alt="This was a fun web application my friends and I completed as our term project in our Software Engineering 101 class at the Universityf of Waterloo. The idea was inspired from an internet sensation called &quot;Twitch Plays Pokemon&quot; that exploded from video game streaming site <a href='http://www.twitch.tv' target='_blank'>Twitch.tv</a>. We thus made our own version called &quot;Twitch Plays Scribblerbot&quot; which allowed users connected to our online chatroom to control our ScribblerBot via typed commands. We used the Python module Myro to communicate with the Flukeboard on the Scribblerbot. We wrote a client for the ScribblerBot to accept commands from a server that would relay instructions from the chatroom via Socket.IO. Using Node.js, we then wrote a chat client that incorporated two video streams, one from the ScribblerBot's Flukeboard and one from an nearby webcam directed at the bot, for the users to send commands to the server.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 programming">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Hive" href="_include/img/work/full/image-02-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/image-02.png" alt="This was an idea my friends and I were very excited to bring to fruition as we could see ourselves needing such an application. Hive is an Android application targeted towards those who are passionate about a hobby or activity who don’t mind inviting another friendly soul to tag along. Using the GPS information from your smartphone, the application can search for nearby events hosted by Hive users as well as create your own event. In the near future, the application will also have Google+ and Facebook integration for easier account creation and management.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 programming">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<a href='http://cv-press.herokuapp.com/' target='_blank'>CV Press</a>" href="_include/img/work/full/image-03-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/image-03.png" alt="Following some workshops about how to make the perfect resume at school, I attended the Hack the North hackathon, which was fortunately hosted at the University of Waterloo. My team decided to create a resume generator that aggregates professional credentials from sites such as LinkedIn, Facebook and Github. We created a Node.js web application that scraped information from websites via their APIs. We then merged al the information into a PDF that although was far from perfect, it was certainly an attempt.">
+                            </li>
+                        	<!-- End Item Project -->
+                            
+							<!-- Item Project and Filter Name -->
+                        	<li class="item-thumbs span3 programming">
+                            	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                            	<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<a href='https://play.google.com/store/apps/details?id=com.icechen1.bathroomfinder&hl=en' target='_blank'>TakeABreak</a>" href="_include/img/work/full/image-04-full.jpg">
+                                	<span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/image-04.png" alt="Even when living in a bustling city like Montreal, finding a water source or a bathroom isn't the easiest thing. Hence my good friend Yu Chen and I programmed an Android application allowing users to locate nearby bathrooms and water fountains for the Canada-Wide Science Fair. We pulled our information from OpenStreetMap's open-source geographical database. We eventually advanced to the national level of the competition and won a bronze medal.">
+                            </li>
+                        	<!-- End Item Project -->
+
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 photography">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Resting Wings" href="_include\img\work\full\Butterfly.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/Butterfly.jpg" alt="Taken in the Osher Rainforest exhibit at the California Academy of Sciences. It was a marvelous experience seeing dozens of butterflies flying all around you. I caught this butterfly resting among the leaves as I traversed an overarching walkway.">
+                            </li>
+                            <!-- End Item Project -->
+
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 photography">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Feuilles d'Or" href="_include\img\work\full\Feuilles d'or.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/Feuilles d'or.jpg" alt="Shot this one in my neighbourhood in the borough of Saint-Laurent. It was mid-fall and the leaves all turned into vibrant shades of red and yellow.">
+                            </li>
+                            <!-- End Item Project -->
+
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 photography">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Floating Along" href="_include\img\work\full\Jellyfish.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/Jellyfish.jpg" alt="This one was also taken at the California Academy of Sciences in their Steinhart Aquarium exhibit. The museum is one of the highlights of my trip to San Francisco as the sheer number of high quality expositions is sure to amaze even the most jaded of critics at least once.">
+                            </li>
+                            <!-- End Item Project -->
+
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 photography">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Napa Valley" href="_include\img\work\full\Napa Valley.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/Napa Valley.jpg" alt="A breathtaking view of Napa Valley during my visit to some world renown vineyards. Coupled with some winetasting, it was a picture perfect day.">
+                            </li>
+                            <!-- End Item Project -->
+
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs span3 photography">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Symmetry" href="_include\img\work\full\Symmetry.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="_include/img/work/thumbs/Symmetry.jpg" alt="A shot of the Villa-Maria metro station tracks from the overpass. Even though I took the transit here every morning for two, the station has a certain charm that's pleasing to the eye.">
+                            </li>
+                            <!-- End Item Project -->
+                        </ul>
+                    </section>
+                    
+            	</div>
+            </div>
+        </div>
+        <!-- End Portfolio Projects -->
+    </div>
+</div>
+<!-- End Our Work Section -->
+
+<!-- About Section -->
+<div id="about" class="page-alternate">
+<div class="container">
+    <!-- Title Page -->
+    <div class="row">
+        <div class="span12">
+            <div class="title-page">
+                <h2 class="title">About Me</h2>
+                <h3 class="title-description">Take a look at my <a href="_include/Resume.pdf">resume</a>!</h3>
+            </div>
+        </div>
+    </div>
+    <!-- End Title Page -->
+
+        <!-- People -->
+    <div class="row">
+        <!-- Start Profile -->
+        <div class="span12 profile">
+            <div class="image-wrap">
+                <img src="_include/img/profile/profile-01.jpg" alt="Steven Kong">
+            </div>
+            <h3 class="profile-name">Steven Kong</h3>
+            <p class="profile-description">Hey! My name is Steven Kong, a software engineering student currently studying at the University of Waterloo. I was born and raised in Montreal, Quebec. When I was a kid, playing with my LEGO&copy; sets as I was deathly afraid of sports, I just wanted to build cool things and, although it may sound simplistic, I've made that my dream as an aspiring programmer. Among the things I've tried so far, a few things have stuck with me. I enjoy cooking, but whether what I make is edible is another thing. I attempt to take nice pictures. I desperately struggle to stay fit even though I go back to square zero everytime I pass a Chipotle. I find entertainment in hitting a ball back and forth with a racquet. I can play the piano. And, of course, I waste time on video games (perhaps a bit too much). That sums me up today but hopefully I'll wake up just a little bit better tomorrow! </p>
+                
+            <div class="social">
+                <ul class="social-icons">
+                    <li><a href="https://ca.linkedin.com/pub/steven-kong/68/837/365"><i class="font-icon-social-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Kong-Artist"><i class="font-icon-social-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/stevendjkong"><i class="font-icon-social-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Profile -->
+        
+    </div>
+    <!-- End People -->
+
+</div>
+</div>
+<!-- End About Section -->
+
+
+<!-- Contact Section -->
+<div id="contact" class="page">
+<div class="container">
+    <!-- Title Page -->
+    <div class="row">
+        <div class="span12">
+            <div class="title-page">
+                <h2 class="title">Get in Touch</h2>
+                <h3 class="title-description">Shoot me a message!</h3>
+            </div>
+        </div>
+    </div>
+    <!-- End Title Page -->
+    
+    <!-- Contact Form -->
+    <div class="row">
+    	<div class="span9">
+        
+        	<form id="contact-form" class="contact-form" action="#">
+            	<p class="contact-name">
+            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
+                </p>
+                <p class="contact-email">
+                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                </p>
+                <p class="contact-message">
+                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                </p>
+                <p class="contact-submit">
+                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
+                </p>
+                
+                <div id="response">
+                
+                </div>
+            </form>
+         
+        </div>
+        
+        <div class="span3">
+        	<div class="contact-details">
+        		<h3>Contact Details</h3>
+                <ul>
+                    <li><a href="mailto:me@kongartist.com">me@kongartist.com</a></li>
+                    <!-- <li>(916) 375-2525</li> -->
+                    <li>
+                        Steven Kong
+                        <br>
+                        P.O. Box 16610
+                        <br>
+                        NE 126 
+                        <br>
+                        Ron Eydt Village
+                        <br>
+                        University of Waterloo
+                        <br>
+                        Waterloo, Ontario, Canada
+                        <br>
+                        N2J 4C1
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Form -->
+</div>
+</div>
+<!-- End Contact Section -->
+
+<!-- Footer -->
+<footer>
+	<p class="credits">&copy;2014 Kong Artist <title="Kong Artist | A ninja in the Matrix"></p>
+</footer>
+<!-- End Footer -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+	<i class="font-icon-arrow-simple-up"></i>
+</a>
+<!-- End Back to Top -->
+
+
+<!-- Js -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+<script src="_include/js/supersized.3.2.7.min.js"></script> <!-- Slider -->
+<script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
+<script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+<script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+<script src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+<script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+<script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
+<script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="_include/js/main.js"></script> <!-- Default JS -->
+<!-- End Js -->
+
+</body>
+</html>
