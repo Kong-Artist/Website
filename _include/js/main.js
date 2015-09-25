@@ -79,10 +79,10 @@ BRUSHED.slider = function(){
 		slides 					:  	[			// Slideshow Images
 
 											{image : '_include/img/work/full/Butterfly.jpg', title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''},
-											{image : "_include/img/work/full/Feuilles d'or.jpg", title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''},
+											{image : "_include/img/work/full/Half-moon-bay.jpg", title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''},
 											{image : '_include/img/work/full/Jellyfish.jpg', title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''},
 											{image : '_include/img/work/full/Napa Valley.jpg', title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''},
-											{image : '_include/img/work/full/Symmetry.jpg', title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''}  
+											{image : '_include/img/work/full/Frog.jpg', title : '<div class="slide-content">Kong Artist</div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
