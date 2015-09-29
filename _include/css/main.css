@@ -646,6 +646,10 @@ nav#menu #menu-nav li a:hover {
 	margin-bottom: 100px;	
 }
 
+.title-page.about-me {
+	margin-bottom: 50px !important;	
+}
+
 .title-page .title {
 	font-size: 48px;
 	margin: 0 0 10px 0
