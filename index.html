@@ -27,6 +27,7 @@
 		</nav>
 	</header>
 
+	<div class="intro"></div>
 
 	<section class="hero">
 		<div class="background-image" style="background-image: url(assets/img/hero.jpg);"></div>
@@ -113,6 +114,15 @@
 		<p>Made by <a href="http://tutorialzine.com/" target="_blank">tutorialzine</a>. images courtesy to <a href="http://unsplash.com/" target="_blank">unsplash</a>.</p>
 		<p>No attribution required. you can remove this footer.</p>
 		<script type="text/javascript" src="/assets/js/shapes.js"></script>
+		<script type="text/javascript" src="/assets/js/typed.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+		        Typed.new('.intro', {
+	        		strings: ["First sentence.", "Second sentence."],
+	        		typeSpeed: 0
+	   		   	});
+	  		});
+		</script>
 	</footer>
 
 </body>

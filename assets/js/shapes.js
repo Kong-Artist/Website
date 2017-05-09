@@ -1,10 +1,10 @@
 (function() {
 
     var __PI2__ = Math.PI * 2,
-    __NB_PARTICLES__ = 300,
+    __NB_PARTICLES__ = 100,
     __GLOBAL_ALPHA__ = 0.3,
     __MAX_SIZE__ = 50,
-    __MAX_SPEED__ = 5,
+    __MAX_SPEED__ = 3,
     __COLORS__ = [];
 
     var numbers = [0, 125, 255];
