@@ -131,15 +131,19 @@ header nav li:last-child{
 	margin-right: 0;	
 }
 
-div.intro {
+.intro-container {
 	position: absolute;
 	top: 50%;
 	left: 0;
 	z-index: 10;
 	width: 100%;
 	display: flex;
-	justify-content: center;
-	color: #fff;
+	justify-content: center;	
+}
+
+div.intro {
+  color: #fff;
+	display: inline-block;
 	font-size: 200%;
 }
 
@@ -465,4 +469,32 @@ footer p a{
 
 @media (max-width: 1200px) {
 	#bsaHolder{ display:none;}
+}
+
+/*-------------
+   Typed.js
+---------------- */
+
+.typed-cursor{
+	color: #fff;
+	font-size: 200%;
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
