@@ -1,20 +1,26 @@
 (function() {
 
     var __PI2__ = Math.PI * 2,
-    __NB_PARTICLES__ = 100,
-    __GLOBAL_ALPHA__ = 0.3,
-    __MAX_SIZE__ = 50,
-    __MAX_SPEED__ = 3,
-    __COLORS__ = [];
+   __NB_PARTICLES__ = 50,
+    __GLOBAL_ALPHA__ = .8,
+    __MAX_SIZE__ = 90,
+    __MAX_SPEED__ = 2,
+    __COLORS__ = [
+        [0, 67, 88],
+        [31, 138, 112],
+        [190, 219, 57],
+        [255, 225, 26],
+        [253, 116, 0]
+    ];
 
-    var numbers = [0, 125, 255];
-    for (var i = 0; i <= 1; i++) {
-        for (var j = 0; j <= 1; j++) {
-            for (var k = 0; k <= 1; k++) {
-                __COLORS__.push([numbers[i], numbers[j], numbers[k]]);
-            }
-        }
-    }
+    // var numbers = [0, 125, 255];
+    // for (var i = 0; i <= 1; i++) {
+    //     for (var j = 0; j <= 1; j++) {
+    //         for (var k = 0; k <= 1; k++) {
+    //             __COLORS__.push([numbers[i], numbers[j], numbers[k]]);
+    //         }
+    //     }
+    // }
 
     window.requestAnimFrame = (function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
