@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Steven Kong - Dreamer and Productivity Guru</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+
+		<!-- <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
 
 </head>
 
 <body>
-
 
 	<!-- <div style="position: relative; width: 0; height: 0;top: 200px;left: 50%;text-align: center;">
 		<h1 style="white-space:nowrap">hi, i'm steven kong</h1>
@@ -48,18 +50,78 @@
 			a bit. Here are some pictures I've taken throughout my journeys and everyday life.</p>
 		<hr>
 
-		<ul class="grid">
-			<li class="small" style="background-image: url(assets/img/coast.jpg);"></li>
-			<li class="large" style="background-image: url(assets/img/island.jpg);"></li>
-			<li class="large" style="background-image: url(assets/img/balloon.jpg);"></li>
-			<li class="small" style="background-image: url(assets/img/mountain.jpg);"></li>
+		<ul class="gallery">
+			<li>
+				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</li>
+			<li>
+				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</li>
+			<li>
+				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</li>
+			<li>
+				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</li>
+			<li>
+				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</li>
+		</ul>
+		  
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+		  
+			  <div class="mySlides">
+				<div class="numbertext">1 / 4</div>
+				<img src="assets/img/1.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">2 / 4</div>
+				<img src="assets/img/1.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="assets/img/1.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">4 / 4</div>
+				<img src="assets/img/1.jpg" style="width:100%">
+			  </div>
+		  
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  
+			  <div class="caption-container">
+				<p id="caption"></p>
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="assets/img/1.jpg" onclick="currentSlide(1)" alt="Nature">
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="assets/img/1.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="assets/img/1.jpg" onclick="currentSlide(3)" alt="Mountains">
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="assets/img/1.jpg" onclick="currentSlide(4)" alt="Lights">
+			  </div>
+			</div>
 		</div>
+
 	</section>
-	
 
 	<section class="features" id="about">
 		<h3 class="title">About Me</h3>
-		<p>Hey! My name is Steven Kong, a Class of 2019 Software Engineering student at the 
+		<p>Hey! I'm Steven, a Class of 2019 Software Engineering student at the 
 			University of Waterloo. Originally from Montreal, I love thinking up ways to solve the 
 			world's challenges and make sure to enjoy life along the way. I hope to simply to wake 
 			up every day just a little bit better than the last :)  </p>
@@ -77,6 +139,7 @@
 		</form>
 	</section>
 
+	
 	<footer>
 		<ul>
 			<li><a href="https://www.facebook.com/stevendjkong"><i class="fa fa-facebook-square"></i></a></li>
@@ -85,23 +148,23 @@
 			<li><a href="https://github.com/kong-artist"><i class="fa fa-github-square"></i></a></li>
 			<li><a href="https://www.linkedin.com/in/steven-kong-36583768"><i class="fa fa-linkedin-square"></i></a></li>
 		</ul>
-	<script type="text/javascript" src="/assets/js/shapes.js"></script>
-		<script type="text/javascript" src="/assets/js/typed.min.js"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function(){
-		        Typed.new('.intro', {
-	        		strings: ["Hi, I'm Steven Kong", "Welcome to my site!"],
-					typeSpeed: 100,
-					backSpeed: 10,
-					backDelay: 1000,
-					showCursor: false
-	   		   	});
-	  		});
-		</script>
 	</footer>
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/typed.min.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+				Typed.new('.intro', {
+					strings: ["Hi, I'm Steven", "Welcome to my site!"],
+			typeSpeed: 100,
+			backSpeed: 10,
+			backDelay: 1000,
+			showCursor: false
+					});
+		});
+</script>
 <script type="text/javascript" src="/assets/js/shapes.js"></script>
-
+<script type="text/javascript" src="/assets/js/lightbox.js"></script>
+<script type="text/javascript" src="/assets/js/gallery.js"></script>
 </html>

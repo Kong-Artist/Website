@@ -1,26 +1,19 @@
 (function() {
 
     var __PI2__ = Math.PI * 2,
-   __NB_PARTICLES__ = 50,
-    __GLOBAL_ALPHA__ = .8,
-    __MAX_SIZE__ = 90,
+    __NB_START_PARTICLES__ = 15,
+    __NB_PARTICLES__ = 30,
+    __PARTICLE_DELAY__ = 80,
+    __GLOBAL_ALPHA__ = .7,
+    __ALPHA_GROWTH__ = .002,
+    __MAX_SIZE__ = 50,
+    __MIN_SIZE__ = 20,
     __MAX_SPEED__ = 2,
     __COLORS__ = [
-        [0, 67, 88],
-        [31, 138, 112],
-        [190, 219, 57],
-        [255, 225, 26],
-        [253, 116, 0]
+        [231, 76, 60],
+        [236, 240, 241],
+        [52, 152, 219],
     ];
-
-    // var numbers = [0, 125, 255];
-    // for (var i = 0; i <= 1; i++) {
-    //     for (var j = 0; j <= 1; j++) {
-    //         for (var k = 0; k <= 1; k++) {
-    //             __COLORS__.push([numbers[i], numbers[j], numbers[k]]);
-    //         }
-    //     }
-    // }
 
     window.requestAnimFrame = (function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
@@ -51,11 +44,12 @@
         init: function(canvas) {
             this.canvas = canvas;
             this.ctx = canvas.getContext('2d');
-            this.ctx.fillStyle = "black";
+            this.ctx.fillStyle = '#2C3E50';
             this.ctx.fillRect(0, 0, canvas.width, canvas.height);
             this.width = canvas.width;
             this.height = canvas.height;
             this.particles = [];
+            this.delay = __PARTICLE_DELAY__;
         },
 
         start: function() {
@@ -77,6 +71,30 @@
 
                 this.checkBounds(particle);
             };
+            
+            if (this.particles.length < __NB_PARTICLES__) {
+                this.delay--;
+                if (this.delay == 0) {
+                    this.delay = __PARTICLE_DELAY__,
+                    param = null,
+                    color = null,
+                    size = parseInt(Math.random() * __MAX_SIZE__ + __MIN_SIZE__);
+                    color = __COLORS__[parseInt(Math.random() * __COLORS__.length)];
+                    opacity = 0;
+                    param = {
+                        pos: Vec2.create(parseInt(Math.random() * (canvas.width - size)) + size, parseInt(Math.random() * (canvas.height - size)) + size),
+                        size: size,
+                        velocity: Vec2.create((Math.round(Math.random() * -1) == 0 ? 0: -1) * Math.random() * __MAX_SPEED__ + 1, (Math.round(Math.random() * -1) == 0 ? 0: -1) * Math.random() * __MAX_SPEED__ + 1),
+                        color: color,
+                        opacity: opacity,
+                        angle: Math.random() * __PI2__,
+                        rotation: Math.random() / 100,
+                        plain: Math.round(Math.random()),
+                        ctx: this.ctx
+                    };
+                    this.addParticle(createShape(param));
+                }
+            }
         },
 
         checkBounds: function(particle) {
@@ -100,7 +118,7 @@
         },
 
         fade: function() {
-            this.ctx.fillStyle = 'black';
+            this.ctx.fillStyle = '#2C3E50';
             this.ctx.fillRect(0, 0, this.width, this.height);
         }
     };
@@ -119,6 +137,7 @@
         size: null,
         velocity: null,
         color: null,
+        opacity: null,
         angle: null,
         rotation: null,
         plain: null,
@@ -197,11 +216,12 @@
                 ctx.arc(0, 0, size, 0, __PI2__);
                 ctx.closePath();
 
+                if (this.opacity < __GLOBAL_ALPHA__) this.opacity += __ALPHA_GROWTH__;
                 if (this.plain) {
-                    ctx.fillStyle = this.color;
+                    ctx.fillStyle = 'rgba(' + this.color[0] + ',' + this.color[1] + ',' + this.color[2] + ',' + this.opacity + ')';
                     ctx.fill();
                 } else {
-                    ctx.strokeStyle = this.color;
+                    ctx.strokeStyle = 'rgba(' + this.color[0] + ',' + this.color[1] + ',' + this.color[2] + ',' + this.opacity + ')';
                     ctx.stroke();
                 }
 
@@ -240,11 +260,12 @@
                 ctx.lineTo(0, -h * 2);
                 ctx.closePath();
 
+                if (this.opacity < __GLOBAL_ALPHA__) this.opacity += __ALPHA_GROWTH__;
                 if (this.plain) {
-                    ctx.fillStyle = this.color;
+                    ctx.fillStyle = 'rgba(' + this.color[0] + ',' + this.color[1] + ',' + this.color[2] + ',' + this.opacity + ')';
                     ctx.fill();
                 } else {
-                    ctx.strokeStyle = this.color;
+                    ctx.strokeStyle = 'rgba(' + this.color[0] + ',' + this.color[1] + ',' + this.color[2] + ',' + this.opacity + ')';
                     ctx.stroke();
                 }
 
@@ -272,18 +293,19 @@
                 var size = this.size,
                 half = size / 2;
 
+                if (this.opacity < __GLOBAL_ALPHA__) this.opacity += __ALPHA_GROWTH__;
                 if (this.plain) {
-                    ctx.fillStyle = this.color;
+                    ctx.fillStyle = 'rgba(' + this.color[0] + ',' + this.color[1] + ',' + this.color[2] + ',' + this.opacity + ')';
                     ctx.fillRect( - half, -half, size, size);
                 } else {
-                    ctx.strokeStyle = this.color;
+                    ctx.strokeStyle = 'rgba(' + this.color[0] + ',' + this.color[1] + ',' + this.color[2] + ',' + this.opacity + ')';
                     ctx.strokeRect( - half, -half, size, size);
                 }
 
                 ctx.restore();
             }
         })
-        };
+    };
 
     var createShape = (function() {
         var types = Object.keys(Shapes),
@@ -316,20 +338,21 @@
     }
     window.onresize = onResize;
 
-    var i = __NB_PARTICLES__,
+    var i = __NB_START_PARTICLES__,
     param = null,
     color = null,
     size = 0;
 
     while (i--) {
-        size = parseInt(Math.random() * __MAX_SIZE__);
+        size = parseInt(Math.random() * __MAX_SIZE__ + __MIN_SIZE__);
         color = __COLORS__[parseInt(Math.random() * __COLORS__.length)];
-
+        opacity = 0;
         param = {
             pos: Vec2.create(parseInt(Math.random() * (canvas.width - size)) + size, parseInt(Math.random() * (canvas.height - size)) + size),
             size: size,
             velocity: Vec2.create((Math.round(Math.random() * -1) == 0 ? 0: -1) * Math.random() * __MAX_SPEED__ + 1, (Math.round(Math.random() * -1) == 0 ? 0: -1) * Math.random() * __MAX_SPEED__ + 1),
-            color: 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + __GLOBAL_ALPHA__ + ')',
+            color: color,
+            opacity: opacity,
             angle: Math.random() * __PI2__,
             rotation: Math.random() / 100,
             plain: Math.round(Math.random()),
