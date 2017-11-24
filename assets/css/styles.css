@@ -517,7 +517,7 @@ footer p a{
 	margin: auto auto;
 	overflow: hidden;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	align-content: flex-start;
 }
 
@@ -530,9 +530,9 @@ footer p a{
 	position: relative;
 	background: #FFFFFF;
 	float: left;
-	margin: 0 25px 25px 0;
 	transition: all .2s ease-in-out;
 	overflow: hidden;
+	margin: 10px;
 }
 
 .gallery li img {
@@ -549,31 +549,23 @@ footer p a{
 
 .gallery li:hover {
 	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-	opacity: 1
+	opacity: 1;
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
   }
 
-  .gallery li:nth-child(3n) {
-	margin-right: 0;
-  }
-  
-/* .row > .column {
-	padding: 0 8px;
-} */
-
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
+.slide-view {
+	display: inline-block;
 }
 
-.column {
-	float: left;
-	width: 25%;
+.view {
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 li img {
-	/* max-width: 250px; */
-	max-height: 200px;
+	max-width: 100%;
+	/* max-height: 200px; */
 	vertical-align: bottom;
 }
 

@@ -12,7 +12,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
+		<link rel="stylesheet" href="/assets/css/flexgrid.css" type="text/css" >
 
 </head>
 
@@ -51,22 +52,78 @@
 		<hr>
 
 		<ul class="gallery">
-			<li>
-				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-			</li>
-			<li>
-				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-			</li>
-			<li>
-				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-			</li>
-			<li>
-				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-			</li>
-			<li>
-				<img src="assets/img/1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-			</li>
-		</ul>
+			<div class="view"> 
+				<div class="slide-view">
+					<div class="row">
+						<div class="col-md-6 col-lg-4">
+							<li>
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							</li>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<li>
+								<img src="assets/img/2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							</li>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<li>
+								<img src="assets/img/3.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							</li>
+						</div>
+							<div class="col-md-6 col-lg-4">
+								<li>
+									<img src="assets/img/4.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+								</li>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<li>
+									<img src="assets/img/5.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+								</li>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<li>
+									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+								</li>
+							</div>
+					</div>
+				</div>
+				<div class="slide-view">
+					<div class="row slide-view">
+							<div class="col-md-6 col-lg-4">
+								<li>
+									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+								</li>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<li>
+									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+								</li>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<li>
+									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+								</li>
+							</div>
+								<div class="col-md-6 col-lg-4">
+									<li>
+										<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+									</li>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<li>
+										<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+									</li>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<li>
+										<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+									</li>
+								</div>
+						</div>
+					</div>
+		
+			</div>
+			</ul>
 		  
 		<div id="myModal" class="modal">
 			<span class="close cursor" onclick="closeModal()">&times;</span>
@@ -166,5 +223,4 @@
 </script>
 <script type="text/javascript" src="/assets/js/shapes.js"></script>
 <script type="text/javascript" src="/assets/js/lightbox.js"></script>
-<script type="text/javascript" src="/assets/js/gallery.js"></script>
 </html>
