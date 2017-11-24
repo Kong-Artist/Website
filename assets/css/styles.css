@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
 /*-------------
  	General
 -------------*/
@@ -511,15 +513,18 @@ footer p a{
 	box-sizing: border-box;
   }
 
+  .gallery-wrapper {
+	  position: relative;
+  }
+
 .gallery {
-	overflow: hidden;
-	*zoom: 1;
+	zoom: 1;
 	margin: auto auto;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
-	width: 100%;
+	width: 75vw;
 }
 
 .gallery .slide-view:hover .photo {
@@ -557,6 +562,40 @@ footer p a{
 
 .gallery input { 
 	display: none; 
+}
+
+.nav {
+	position: absolute;
+	width: 75vw;
+	height: 100%;
+}
+
+.nav label {
+	height: 100%;
+	z-index: 2;
+	position: relative;
+    opacity: 0.3;
+    font-size: 100pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    color: #FFF;
+	text-shadow: 0px 0px 15px rgb(119, 119, 119);
+	background-color: rgba(255, 255, 255, .3);
+    transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+
+}
+
+.nav label:not(.disabled):hover { 
+	cursor: pointer;
+	opacity: 1; 
+}
+
+.nav .prev-slide { float: left; left: -5vw;}
+.nav .next-slide { float: right; 
+	right: -5vw;
 }
 
 .nav-dots {
@@ -597,11 +636,12 @@ input#slide-2:checked ~ .nav-dots label#slide-dot-2{
 	-webkit-user-drag: none;
 	user-drag: none;
 	-webkit-touch-callout: none;
-	width: 85vw;
+	width: 75vw;
+	height: 100%;
 }
 
 .slide-view .row {
-	width: 85vw;
+	width: 75vw;
 }
 
 .view {

@@ -59,7 +59,8 @@ function viewWidth() {
 function slideTo(index) {
   slideNum = index;
   var prefixes = ["webkitTransform", "oTransform", "mozTransform", "transform"]
-  prefixes.forEach(function(pre){slides.style[pre] = "translateX(-" + slides.children[0].offsetWidth * slideNum + "px)"})
+  prefixes.forEach(function(pre){slides.style[pre] = "translateX(-" + slides.children[0].offsetWidth * slideNum + "px)"});
+  refreshNavButtons();
 }
 
 function isIntentional() {
@@ -88,21 +89,8 @@ function saveStart(event) {
 function saveStop(event) {
     stopX = getX(event)
     stopZ = Date.now()
-  if(isIntentional() && stopX > startX) {
-    if(slideNum === 0) {
-      slideNum = numOfSlides
-    } else {
-      slideNum = slideNum - 1
-    }
-    checkRadioButton(slideNum);
-  } else if (isIntentional() && startX > stopX) {
-    if(slideNum === numOfSlides) {
-      slideNum = 0
-    } else {
-      slideNum = slideNum + 1
-    }
-    checkRadioButton(slideNum);
-  }
+  if(isIntentional() && stopX > startX) decrementSlide();
+  else if (isIntentional() && startX > stopX) incrementSlide();
 }
 
 var slider_container = document.querySelector(".gallery")
@@ -134,6 +122,58 @@ function radioButtonOnChange(event) {
 
 function checkRadioButton(index) {
   var nav_inputs = $(".gallery input:radio[name='slide-btn']");
-  var selectedIndex = nav_inputs[index].checked = true;
+  nav_inputs[index].checked = true;
   radioButtonOnChange();
+}
+
+var prevSlide = document.querySelector("label.prev-slide");
+var nextSlide = document.querySelector("label.next-slide");
+
+function refreshNavButtons() {
+  var nav_inputs = $(".gallery input:radio[name='slide-btn']");
+  var selected = $(".gallery input:radio[name='slide-btn']:checked");
+  var selectedIndex = nav_inputs.index(selected);
+  if (selectedIndex == 0) {
+    prevSlide.classList.add('disabled');
+    prevSlide.onclick = null;
+  } else {
+    prevSlide.classList.remove('disabled');
+    prevSlide.onclick = changeSlide;
+  }
+
+  if (selectedIndex == nav_inputs.length - 1) {
+    nextSlide.classList.add('disabled');
+    nextSlide.onclick = null;
+  } else {
+    nextSlide.classList.remove('disabled');
+    nextSlide.onclick = changeSlide;
+  }
+}
+
+refreshNavButtons();
+
+function decrementSlide() {
+  if(slideNum === 0) {
+    slideNum = numOfSlides;
+  } else {
+    slideNum = slideNum - 1;
+  }
+  checkRadioButton(slideNum);
+}
+
+function incrementSlide() {
+  if(slideNum === numOfSlides) {
+    slideNum = 0;
+  } else {
+    slideNum = slideNum + 1;
+  }
+  checkRadioButton(slideNum);
+}
+
+function changeSlide(event) {
+  if ($(event.target).hasClass('prev-slide')) {
+    decrementSlide();
+  } else {
+    incrementSlide();
+  }
 }
