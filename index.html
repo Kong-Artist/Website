@@ -22,20 +22,29 @@
 	<!-- <div style="position: relative; width: 0; height: 0;top: 200px;left: 50%;text-align: center;">
 		<h1 style="white-space:nowrap">hi, i'm steven kong</h1>
 	</div> -->
-	<canvas id="scene"></canvas>
+	<!-- <canvas id="scene"></canvas> -->
 
 	<header>
 		<h2><a href="#">kongartist</a></h2>
 		<nav>
-			<li><a href="#">Home</a></li>
-			<li><a href="#photography">Photography</a></li>
-			<li><a href="#about">About</a></li>
+			<li><a href="#" >Home</a></li>
+			<li><a href="#photography" onclick="test('photography'); return false;">Photography</a></li>
+			<li><a href="#about" onclick="test('about'); return false;">About</a></li>
 		</nav>
 	</header>
 
-  <div class="intro-container">
+  <!-- <div class="intro-container">
 	  <div class="intro"></div>
-  </div>
+		<div class="name"></div>
+	</div> -->
+	
+	<div id="canvas-wrap">
+		<canvas id="scene"></canvas>
+		<div class="intro-container">
+			<div class="intro"></div>
+			<div class="name"></div>
+		</div>
+	</div>
 	<!--<section class="hero">
 		<div class="background-image" style="background-image: url(assets/img/hero.jpg);"></div>
 		<h1>Responsive Flexbox Template</h1>
@@ -222,15 +231,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/js/typed.min.js"></script>
 <script>
-	document.addEventListener('DOMContentLoaded', function(){
-				Typed.new('.intro', {
-					strings: ["Hi, I'm Steven", "Welcome to my site!"],
+	function printName(self) {
+		Typed.new('.name', {
+			strings: ["Steven Kong"],
 			typeSpeed: 100,
-			backSpeed: 10,
-			backDelay: 1000,
-			showCursor: false
-					});
+			showCursor: false,
 		});
+	}; 
+
+	document.addEventListener('DOMContentLoaded', function(){
+			Typed.new('.intro', {
+				strings: ["Hey there!^1000 I'm"],
+				typeSpeed: 100,
+				backDelay: 1000,
+				showCursor: false,
+				callback: printName
+		})});
 </script>
 <script type="text/javascript" src="/assets/js/shapes.js"></script>
 <script type="text/javascript" src="/assets/js/index.js"></script>

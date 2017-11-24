@@ -329,10 +329,16 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    var intro = document.querySelector('.intro-container');
+    intro.width = window.innerWidth;
+    intro.height = window.innerHeight;
+
     anim.init(canvas);
     function onResize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        intro.width = window.innerWidth;
+        intro.height = window.innerHeight;
         anim.width = canvas.width;
         anim.height = canvas.height;
     }

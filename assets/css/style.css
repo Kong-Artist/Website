@@ -74,7 +74,7 @@ section{
 }
 
 section h3.title{
-	color: #414a4f;
+	color: #2980B9;
 	text-transform: capitalize; 
 	font: bold 32px 'Open Sans', sans-serif;
 	margin-bottom: 35px;
@@ -114,8 +114,13 @@ header{
 	padding: 35px 100px 0;
 }
 
-header h2{
+header{
 	font-family: 'Quicksand', sans-serif;
+	font-size: 200%;
+}
+
+header h2 {
+	color: #2980B9;
 }
 
 header nav{
@@ -134,20 +139,29 @@ header nav li:last-child{
 	margin-right: 0;	
 }
 
-.intro-container {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	display: flex;
-	justify-content: center;	
+.canvas-wrapper {
+	position: relative;
 }
 
-div.intro {
-  color: #fff;
-	display: inline-block;
+.intro-container {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;	
+}
+
+.intro-container div {
+	color: #fff;
 	font-size: 200%;
+	margin: 2vh;
+}
+
+.intro-container div.name {
+	font-size: 400%;
+	font-family: "Varela Round", sans-serif;
+	color: #2980B9;
 }
 
 @media (max-width: 1000px){
@@ -206,11 +220,13 @@ div.intro {
 .hero h1{
 	font: bold 60px 'Open Sans', sans-serif;
 	margin-bottom: 15px;
+	color: #2980B9;
 }
 
 .hero h3{
 	font: normal 28px 'Open Sans', sans-serif;
 	margin-bottom: 40px;
+	color: #2980B9;
 }
 
 .hero a.btn{
