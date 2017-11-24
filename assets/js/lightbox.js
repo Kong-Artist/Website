@@ -47,7 +47,6 @@ var slideNum = 0
 var slides = document.querySelector(".view")
 var numOfSlides = slides.children.length - 1
 
-
 function viewWidth() {
   if(document.width){
     return document.width;
@@ -58,8 +57,9 @@ function viewWidth() {
   }
 }
 function slideTo(index) {
+  slideNum = index;
   var prefixes = ["webkitTransform", "oTransform", "mozTransform", "transform"]
-  prefixes.forEach(function(pre){slides.style[pre] = "translateX(-" + viewWidth() * slideNum + "px)"})
+  prefixes.forEach(function(pre){slides.style[pre] = "translateX(-" + slides.children[0].offsetWidth * slideNum + "px)"})
 }
 
 function isIntentional() {
@@ -94,14 +94,14 @@ function saveStop(event) {
     } else {
       slideNum = slideNum - 1
     }
-    slideTo(slideNum)
+    checkRadioButton(slideNum);
   } else if (isIntentional() && startX > stopX) {
     if(slideNum === numOfSlides) {
       slideNum = 0
     } else {
       slideNum = slideNum + 1
     }
-    slideTo(slideNum)
+    checkRadioButton(slideNum);
   }
 }
 
@@ -124,3 +124,16 @@ slider_container.addEventListener('mouseup', function(event) {
 slider_container.addEventListener('touchmove', function(event){
   event.preventDefault()
 })
+
+function radioButtonOnChange(event) {
+  var nav_inputs = $(".gallery input:radio[name='slide-btn']");
+  var selected = $(".gallery input:radio[name='slide-btn']:checked");
+  var selectedIndex = nav_inputs.index(selected);
+  slideTo(selectedIndex);
+}
+
+function checkRadioButton(index) {
+  var nav_inputs = $(".gallery input:radio[name='slide-btn']");
+  var selectedIndex = nav_inputs[index].checked = true;
+  radioButtonOnChange();
+}
