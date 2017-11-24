@@ -519,51 +519,96 @@ footer p a{
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
+	width: 100%;
 }
 
-.gallery:hover li {
+.gallery .slide-view:hover .photo {
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 	opacity: 0.5;
 }
 
-.gallery li {
+.gallery .photo {
 	position: relative;
 	background: #FFFFFF;
 	float: left;
 	transition: all .2s ease-in-out;
 	overflow: hidden;
-	margin: 10px;
+	margin: 6px;
 }
 
-.gallery li img {
+.gallery .photo img {
 	backface-visibility: hidden;
 	transition: all .2s ease-in-out;
 }
 
-.gallery li img:hover {
+.gallery .photo img:hover {
 	-moz-transform: scale(1.1, 1.1);
 	-ms-transform: scale(1.1, 1.1);
 	-webkit-transform: scale(1.1, 1.1);
 	transform: scale(1.1, 1.1);
 }
 
-.gallery li:hover {
+.gallery .slide-view .photo:hover {
 	filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 	opacity: 1;
 	cursor: -webkit-zoom-in;
 	cursor: -moz-zoom-in;
-  }
+}
+
+.gallery input { 
+	display: none; 
+}
+
+.nav-dots {
+	width: 100%;
+	height: 20px;
+	display: block;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+input#slide-1:checked ~ .nav-dots label#slide-dot-1,
+input#slide-2:checked ~ .nav-dots label#slide-dot-2{
+	background: rgba(0, 0, 0, 0.6);
+}
 
 .slide-view {
 	display: inline-block;
+	-moz-user-select: none;
+	-moz-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
+	-webkit-touch-callout: none;
 }
 
 .view {
 	white-space: nowrap;
-	overflow: hidden;
+	width: 100%;
+	overflow: scroll;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	transition:all 0.5s ease-in-out;
 }
 
-li img {
+.photo img {
 	max-width: 100%;
 	/* max-height: 200px; */
 	vertical-align: bottom;
@@ -690,9 +735,9 @@ img.hover-shadow {
 	display: none;
 	cursor: -webkit-zoom-out;
 	cursor: -moz-zoom-out;
-  }
+}
   /* line 100, ../scss/style.scss */
-  .lightbox figure {
+.lightbox figure {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -704,5 +749,4 @@ img.hover-shadow {
 	-o-background-size: contain;
 	-webkit-background-size: contain;
 	background-size: contain;
-  }
-  
+}

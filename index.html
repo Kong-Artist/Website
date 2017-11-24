@@ -51,79 +51,84 @@
 			a bit. Here are some pictures I've taken throughout my journeys and everyday life.</p>
 		<hr>
 
-		<ul class="gallery">
+		<div class="gallery">
+			<input type="radio" name="radio-btn" id="slide-1" checked />
+			<input type="radio" name="radio-btn" id="slide-2"/>
 			<div class="view"> 
 				<div class="slide-view">
 					<div class="row">
 						<div class="col-md-6 col-lg-4">
-							<li>
+							<div class="photo">
 								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-							</li>
+							</div>
 						</div>
 						<div class="col-md-6 col-lg-4">
-							<li>
+							<div class="photo">
 								<img src="assets/img/2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-							</li>
+							</div>
 						</div>
 						<div class="col-md-6 col-lg-4">
-							<li>
+							<div class="photo">
 								<img src="assets/img/3.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-							</li>
+							</div>
 						</div>
-							<div class="col-md-6 col-lg-4">
-								<li>
-									<img src="assets/img/4.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-								</li>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/4.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
-							<div class="col-md-6 col-lg-4">
-								<li>
-									<img src="assets/img/5.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-								</li>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/5.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
-							<div class="col-md-6 col-lg-4">
-								<li>
-									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-								</li>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
+						</div>
 					</div>
 				</div>
 				<div class="slide-view">
-					<div class="row slide-view">
-							<div class="col-md-6 col-lg-4">
-								<li>
-									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-								</li>
+					<div class="row">
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
-							<div class="col-md-6 col-lg-4">
-								<li>
-									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-								</li>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
-							<div class="col-md-6 col-lg-4">
-								<li>
-									<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-								</li>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							</div>
-								<div class="col-md-6 col-lg-4">
-									<li>
-										<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-									</li>
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<li>
-										<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-									</li>
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<li>
-										<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-									</li>
-								</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="photo">
+								<img src="assets/img/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+							</div>
 						</div>
 					</div>
-		
+				</div>
 			</div>
-			</ul>
+			<div class="nav-dots">
+				<label for="slide-1" class="nav-dot" id="slide-dot-1"></label>
+				<label for="slide-2" class="nav-dot" id="slide-dot-2"></label>
+			</div>
+		</div>
 		  
 		<div id="myModal" class="modal">
 			<span class="close cursor" onclick="closeModal()">&times;</span>
