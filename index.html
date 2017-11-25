@@ -114,17 +114,30 @@
 
 	<section class="contact" id="contact">
 		<h3 class="title">Want to get in touch?</h3>	
-		<p>Send me an e-mail! Let me know what you're thinking or, even better, if you have some feedback for me!</p>
+		<p>Let me know what you're thinking, or even if you have some comments or feedback for me! </p>
 		<hr>
 
-		<form>
-			<input type="email" placeholder="Email">
-			<a href="#" class="btn">Subscribe now</a>
-		</form>
+		<div class="contact-form-wrapper">
+			<form id="contact-form">
+				<div class="row">
+					<input type="text" placeholder="Name" value name="name">
+					<input type="email" placeholder="Email" value name="email">
+				</div>
+
+				<div class="row">
+					<textarea type="text" placeholder="Message (ex: Stop setting fires in the kitchen)" name="message" rows="3"></textarea>
+				</div>
+
+				<div class="row">
+					<a class="btn" id="contact-submit">Send mail</a>
+				</div>
+			</form>
+		</div>
 	</section>
 
 	
 	<footer>
+		<p>I'm on social media! </p>
 		<ul>
 			<li><a href="https://www.facebook.com/stevendjkong"><i class="fa fa-facebook-square"></i></a></li>
 			<!--<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>-->
@@ -148,7 +161,7 @@
 
 	document.addEventListener('DOMContentLoaded', function(){
 			Typed.new('.intro', {
-				strings: ["Hey there!^1000 I'm"],
+				strings: ["Hey there!^700 I'm"],
 				typeSpeed: 100,
 				backDelay: 1000,
 				showCursor: false,
