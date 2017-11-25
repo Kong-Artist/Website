@@ -4,15 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Steven D. Kong</title>
+    <title>Steven Kong</title>
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-		<link rel="stylesheet" href="/assets/css/flexgrid.css" type="text/css" >
-		<link href="/assets/css/lightbox.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+	<link href="/assets/css/lightbox.min.css" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110201614-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-110201614-1');
+	</script>
 
 </head>
 
@@ -37,8 +46,7 @@
 	</div>
 
 	<section class="photography" id="photography">
-		<h3 class="title">Photography 
-			</h3>
+		<h3 class="title">Photography </h3>
 		<p>The world's a pretty awesome place. Here are some pictures I've taken throughout my journeys!</p>
 		<hr>
 
@@ -48,58 +56,104 @@
 				<label class="next-slide">&#x203a;</label>
 			</div>
 			<div class="gallery">
-					<input type="radio" name="slide-btn" id="slide-1" onchange="radioButtonOnChange()" checked />
-					<input type="radio" name="slide-btn" id="slide-2" onchange="radioButtonOnChange()"/>
-					<div class="view">
-						<div class="slide-view">
-							<div class="row">
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Cliffs.jpg" data-lightbox="gallery" data-title="Cliffs<p>Cliffs off coast of Busan</p>"><img src="/assets/img/thumbs/Cliffs.jpg" class="hover-shadow"></a>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Goldengate.jpg" data-lightbox="gallery" data-title="Goldengate<p>Warm lights off the Goldengate bridge</p>"><img src="/assets/img/thumbs/Goldengate.jpg" class="hover-shadow"></a>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Frog.jpg" data-lightbox="gallery" data-title="Frog<p>A stealthy frog</p>"><img src="/assets/img/thumbs/Frog.jpg" class="hover-shadow"></a>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Jellyfish.jpg" data-lightbox="gallery" data-title="Jellyfish<p>A shocking display of colors</p>"><img src="/assets/img/thumbs/Jellyfish.jpg" class="hover-shadow"></a>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Butterfly.jpg" data-lightbox="gallery" data-title="Butterfly<p>A resting butterfly</p>"><img src="/assets/img/thumbs/Butterfly.jpg" class="hover-shadow"></a>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Napa Valley.jpg" data-lightbox="gallery" data-title="Napa Valley<p>The scenic Napa Valley</p>"><img src="/assets/img/thumbs/Napa Valley.jpg" class="hover-shadow"></a>
-									</div>
+				<input type="radio" name="slide-btn" id="slide-1" onchange="radioButtonOnChange()" checked />
+				<input type="radio" name="slide-btn" id="slide-2" onchange="radioButtonOnChange()"/>
+				<input type="radio" name="slide-btn" id="slide-3" onchange="radioButtonOnChange()"/>
+				<div class="view">
+					<div class="slide-view">
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Cliffs.jpg" data-lightbox="gallery" data-title="Cliffs<p>Cliffs off coast of Busan</p>"><img src="/assets/img/thumbs/Cliffs.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
-						</div>
-						<div class="slide-view">
-							<div class="row">
-								<div class="col-sm-6 col-md-4">
-									<div class="photo">
-										<a href="/assets/img/full/Leaves.jpg" data-lightbox="gallery" data-title="Leaves<p>Truly autumn in Montreal</p>"><img src="/assets/img/thumbs/Leaves.jpg" class="hover-shadow"></a>
-									</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Orchard Skyscrapers.jpg" data-lightbox="gallery" data-title="Orchard Skyscrapers<p>Shopping district of Singapore</p>"><img src="/assets/img/thumbs/Orchard Skyscrapers.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Kingfisher.jpg" data-lightbox="gallery" data-title="Kingfisher<p>A resting bird amongst the trees</p>"><img src="/assets/img/thumbs/Kingfisher.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Jeju City.jpg" data-lightbox="gallery" data-title="Jeju City<p>A city between the mountains</p>"><img src="/assets/img/thumbs/Jeju City.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Water Monitor.jpg" data-lightbox="gallery" data-title="Water Monitor<p>A hipster lizard</p>"><img src="/assets/img/thumbs/Water Monitor.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Songdo.jpg" data-lightbox="gallery" data-title="Songdo<p>A Smart City</p>"><img src="/assets/img/thumbs/Songdo.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="nav-dots">
-						<label for="slide-1" class="nav-dot" id="slide-dot-1"></label>
-						<label for="slide-2" class="nav-dot" id="slide-dot-2"></label>
+					<div class="slide-view">
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Lotus.jpg" data-lightbox="gallery" data-title="Lotus<p>A solitary flower in a pond</p>"><img src="/assets/img/thumbs/Lotus.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Figure.jpg" data-lightbox="gallery" data-title="Figure<p>An ominous figure in the fog</p>"><img src="/assets/img/thumbs/Figure.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Goldengate.jpg" data-lightbox="gallery" data-title="Goldengate<p>Warm lights off the Goldengate bridge</p>"><img src="/assets/img/thumbs/Goldengate.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Helix Bridge.jpg" data-lightbox="gallery" data-title="Helix Bridge<p>Interlocking metal bridge</p>"><img src="/assets/img/thumbs/Helix Bridge.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Frog.jpg" data-lightbox="gallery" data-title="Frog<p>A stealthy frog</p>"><img src="/assets/img/thumbs/Frog.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Jellyfish.jpg" data-lightbox="gallery" data-title="Jellyfish<p>A shocking display of colors</p>"><img src="/assets/img/thumbs/Jellyfish.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide-view">
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Butterfly.jpg" data-lightbox="gallery" data-title="Butterfly<p>A resting butterfly</p>"><img src="/assets/img/thumbs/Butterfly.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Napa Valley.jpg" data-lightbox="gallery" data-title="Napa Valley<p>The scenic Napa Valley</p>"><img src="/assets/img/thumbs/Napa Valley.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Leaves.jpg" data-lightbox="gallery" data-title="Leaves<p>Truly autumn in Montreal</p>"><img src="/assets/img/thumbs/Leaves.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="nav-dots">
+					<label for="slide-1" class="nav-dot" id="slide-dot-1"></label>
+					<label for="slide-2" class="nav-dot" id="slide-dot-2"></label>
+					<label for="slide-3" class="nav-dot" id="slide-dot-3"></label>
+				</div>
+			</div>
 		</div>
 	</section>
 	
@@ -170,7 +224,7 @@
 	});
 </script>
 <script type="text/javascript" src="/assets/js/shapes.js"></script>
-<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/index.min.js"></script>
 <script type="text/javascript" src="/assets/js/parallax.min.js"></script>
 <script type="text/javascript" src="/assets/js/lightbox.min.js"></script>
 </html>
