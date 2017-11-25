@@ -171,25 +171,17 @@ function contactForm(){
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
+        $('#response').removeClass('success');
+				$('#response').empty().html(response.html);
 				
 				if(response.status){
+          $('#response').addClass('success');
 					$('#contact-form input').val('');
 					$('#contact-form textarea').val('');
 				}
-				
-				$('#response').empty().html(response.html);
 			}
 		});
 		return false;
 	});
 }
 contactForm();
-
-function switchNav() {
-  var x = document.getElementById("topNav");
-  if (x.className === "responsive") {
-      x.className = "";
-  } else {
-      x.className = "responsive";
-  }
-}

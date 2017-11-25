@@ -79,7 +79,7 @@ class Contact_Form{
 		if($mail)
 		{
 			$this->response_status = 1;
-			$this->response_html = '<p>Thank You!</p>';
+			$this->response_html = '<p>Thanks for the email!</p>';
 		}
 	}
 
