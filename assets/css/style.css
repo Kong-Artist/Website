@@ -430,9 +430,14 @@ footer p a{
     -webkit-transition: opacity .2s;
 }
 
-.nav label:not(.disabled):hover { 
+.nav label:hover { 
 	cursor: pointer;
 	opacity: 1; 
+}
+
+.nav label.disabled:hover {
+	cursor: default;
+	opacity: .3;
 }
 
 .nav .prev-slide { float: left; left: -5vw;}
@@ -501,3 +506,9 @@ input#slide-2:checked ~ .nav-dots label#slide-dot-2{
 	/* max-height: 200px; */
 	vertical-align: bottom;
 }
+
+.lb-details span {
+	font-family: 'Quicksand Bold', sans-serif;
+	font-size: 120%;
+}
+
