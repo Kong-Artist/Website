@@ -48,7 +48,7 @@ function generate() {
     for (var j = 0; j < 6; j++) {
       if (j + (i * 6) >= fileNames.length) break;
 
-    htmlString += `<div class="col-md-6 col-lg-4">\n\t\t\t\t\t<div class="photo">\n\t\t\t\t\t\t<a href="${fullsPath + fileNames[j + (i*6)]}.jpg" data-lightbox="gallery" data-title="${fileNames[j + (i*6)]}<p>${captions[j + (i*6)]}</p>"><img src="${thumbsPath + fileNames[j + (i*6)]}.jpg" class="hover-shadow"></a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t`;
+    htmlString += `<div class="col-sm-6 col-md-4">\n\t\t\t\t\t<div class="photo">\n\t\t\t\t\t\t<a href="${fullsPath + fileNames[j + (i*6)]}.jpg" data-lightbox="gallery" data-title="${fileNames[j + (i*6)]}<p>${captions[j + (i*6)]}</p>"><img src="${thumbsPath + fileNames[j + (i*6)]}.jpg" class="hover-shadow"></a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t`;
       if (j != 5 && (j + (i * 6) + 1 < fileNames.length)) {
         htmlString += '\t';
       }

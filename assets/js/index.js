@@ -23,6 +23,44 @@ function slideTo(index) {
   refreshNavButtons();
 }
 
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function() {
+        // Callback after animation
+        // Must change focus!
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+      });
+    }
+  }
+});
+
+
 function isIntentional() {
   minDistance = Math.abs(startX - stopX) > (window.innerWidth / 35)
   withinTime = Math.abs(startZ - stopZ) < 500
@@ -138,28 +176,6 @@ function changeSlide(event) {
   }
 }
 
-function scrollTo(to, duration) {
-  if (document.body.scrollTop == to) return;
-  var diff = to - document.body.scrollTop;
-  var scrollStep = Math.PI / (duration / 10);
-  var count = 0, currPos;
-  start = window.pageYOffset;
-  scrollInterval = setInterval(function(){
-      if (document.body.scrollTop != to) {
-          count = count + 1;
-          currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
-          document.body.scrollTop = currPos;
-      }
-      else { clearInterval(scrollInterval); }
-  },10);
-}
-
-function test(elID)
-{
-  var dest = document.getElementById(elID);
-  scrollTo(dest.offsetTop, 500);
-}
-
 function contactForm(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
@@ -186,3 +202,12 @@ function contactForm(){
 }
 
 contactForm();
+
+function switchNav() {
+  var x = document.getElementById("topNav");
+  if (x.className === "responsive") {
+      x.className = "";
+  } else {
+      x.className = "responsive";
+  }
+}
