@@ -335,10 +335,10 @@
 
     anim.init(canvas);
     function onResize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        intro.width = window.innerWidth;
-        intro.height = window.innerHeight;
+        canvas.width = $("#canvas-wrap").width();
+        canvas.height = $("#canvas-wrap").height();
+        intro.width = $("#canvas-wrap").width();
+        intro.height = $("#canvas-wrap").height();
         anim.width = canvas.width;
         anim.height = canvas.height;
     }

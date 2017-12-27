@@ -215,8 +215,8 @@ header nav li:last-child{
 	margin-right: 0;	
 }
 
-.canvas-wrapper {
-	position: relative;
+#canvas-wrap {
+	overflow: hidden;
 }
 
 .intro-container {
@@ -387,7 +387,9 @@ p {
 }
 
 .gallery-wrapper input#slide-1:checked ~ .nav-dots label#slide-dot-1,
-.gallery-wrapper input#slide-2:checked ~ .nav-dots label#slide-dot-2{
+.gallery-wrapper input#slide-2:checked ~ .nav-dots label#slide-dot-2,
+.gallery-wrapper input#slide-3:checked ~ .nav-dots label#slide-dot-3,
+.gallery-wrapper input#slide-4:checked ~ .nav-dots label#slide-dot-4{
 	background: rgba(0, 0, 0, 0.6);
 }
 
@@ -403,6 +405,10 @@ p {
 	-webkit-touch-callout: none;
 	width: 75vw;
 	height: 100%;
+}
+
+.slide-view .row {
+	width: 75vw;
 }
 
 .view {
@@ -432,7 +438,7 @@ p {
 		line-height: 780px;
 	}
 	
-	.gallery, .slide-view, .gallery-wrapper .nav {
+	.gallery, .slide-view, .gallery-wrapper .nav, .slide-view .row {
 		width: 70vw;
 	}
 
@@ -447,7 +453,7 @@ p {
 		line-height: 1250px;
 	}
 	
-	.gallery, .slide-view, .gallery-wrapper .nav {
+	.gallery, .slide-view, .gallery-wrapper .nav, .slide-view .row {
 		width: 60vw;
 	}
 
@@ -516,7 +522,7 @@ p {
 .contact form input, .contact form textarea, .contact form a{
 	padding: 15px;
 	margin: 10px 20px;
-	font-size: 120%;
+	font-size: 100%;
 	font-family: 'Open Sans', sans-serif
 }
 
@@ -561,16 +567,23 @@ p {
 @media screen and (max-width: 75em) {
 
 	#contact-form {
-		font-size: 80%;
+		font-size: 90%;
 	}
 }	
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 54em) {
 	
-		#contact-form {
-			font-size: 60%;
-		}
+	#contact-form {
+		font-size: 80%;
 	}
+}
+
+@media screen and (max-width: 38em) {
+	
+	#contact-form {
+		font-size: 70%;
+	}
+}
 
 /*-------------
  	Footer
