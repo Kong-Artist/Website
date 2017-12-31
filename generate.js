@@ -2,7 +2,7 @@ const logFile = './assets/img/photo-log';
 const fs = require('fs');
 
 const thumbsPath = '/assets/img/thumbs/';
-const fullsPath = '/assets/img/full/';
+const fullsPath = '/assets/img/thumbs/';
 
 var htmlString = '<div class="gallery">\n\t';
 
