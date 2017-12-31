@@ -9,8 +9,9 @@ var numOfSlides = slides.children.length - 1
 
 function slideTo(index) {
   slideNum = index;
+  var correction = Math.floor(slideNum / 5) * 5;
   var prefixes = ["webkitTransform", "oTransform", "mozTransform", "transform"]
-  prefixes.forEach(function(pre){slides.style[pre] = "translateX(-" + slides.children[0].offsetWidth * slideNum + "px)"});
+  prefixes.forEach(function(pre){slides.style[pre] = "translateX(-" + (slides.children[0].offsetWidth * slideNum + correction) + "px)"});
   refreshNavButtons();
 }
 

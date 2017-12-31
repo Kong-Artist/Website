@@ -273,6 +273,7 @@ header nav li:last-child{
 .work-wrapper {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	margin: 20px 0;
 }
 
@@ -282,13 +283,16 @@ header nav li:last-child{
 	justify-content: center;
 	margin: 1em 4em;
 	background-color: #ECF0F1;
-	height: 18vw;
+	height: 20vw;
 	width: 20vw;
+	min-height: 100px;
+	min-width: 100px;
 	border-radius: 30px;
 }
 
 .work-logo img {
 	max-width: 15vw;
+	min-width: 60px;
 }
 
 .work-content {
@@ -317,6 +321,41 @@ header nav li:last-child{
 
 .work-description {
 	line-height: 1.5;
+}
+
+@media (max-width: 75em){
+	.work-logo {
+		margin: 1em 3em;
+	}
+
+	.work-title {
+		font-size: 130%;
+	}
+}
+
+@media screen and (max-width: 54em) {
+	
+	.work-title {
+		font-size: 130%;
+	}
+
+	.work-location, .work-description {
+		font-size: 90%;
+	}
+}
+
+@media screen and (max-width: 38em) {
+	.work-logo {
+		margin: 1em 2em;
+	}
+
+	.work-title {
+		font-size: 110%;
+	}
+	
+	.work-location, .work-description {
+		font-size: 80%;
+	}
 }
 
 /*--------------------
