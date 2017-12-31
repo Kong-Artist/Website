@@ -30,7 +30,8 @@
 	<header>
 		<h2><a href="#">kongartist</a></h2>
 		<nav>
-			<li><a href="#" >Home</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#work">Work</a></li>
 			<li><a href="#photography">Photography</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="#contact">Contact</a></li>
@@ -44,10 +45,80 @@
 			<div class="name"></div>
 		</div>
 	</div>
+	
+	<section class="work" id="work">
+		<h3 class="title">Experience</h3>
+		<p class="subtitle"> Here are few places I've been fortunate enough to work at through my career! </p>
+		<hr>
+		<div class="work-wrapper">
+			<div class="work-logo">
+				<img src="/assets/img/microsoft.png">
+			</div>
+			<div class="work-content">
+				<div class="work-title">
+					<a href="https://microsoft.com">Microsoft (Dynamics CRM)</a>
+				</div>
+				<div class="work-location">
+					<p> Redmond, WA </p>
+				</div>
+				<div class="work-description">
+					<p>I worked as part of the CRM Analytics Experiences team. My team worked on implementing a keyword and sentiment analysis system for enriching interaction data coming through the CRM pipeline. I took on the role of embedding our system into the existing CRM Analytics ecosystem as well as developping a wordcloud widget to showcase the enhanced data exposed through REST APIs. </p>
+				</div>
+			</div>
+		</div>
+		<div class="work-wrapper">
+			<div class="work-logo">
+				<img src="/assets/img/dialogue.png">
+			</div>
+			<div class="work-content">
+				<div class="work-title">
+					<a href="https://dialogue.co">Dialogue</a>
+				</div>
+				<div class="work-location">
+					<p> Montreal, QC </p>
+				</div>
+				<div class="work-description">
+					<p> Dialogue is virtual healthcare platform. I worked on implementing a continuous integration system to build and release Android and iOS mobile clients automatically. In addition, I helped create the family member functionality to allow users to add dependents to their healthcare plan and built out the healthcare professional interface. <p>
+				</div>
+			</div>
+		</div>
+		<div class="work-wrapper">
+			<div class="work-logo">
+				<img src="/assets/img/microsoft.png">
+			</div>
+			<div class="work-content">
+				<div class="work-title">
+					<a href="https://microsoft.com">Microsoft (Foundry)</a>
+				</div>
+				<div class="work-location">
+					<p> Boston, MA </p>
+				</div>
+				<div class="work-description">
+					<p> My team worked on building a Slack chatbot that integrated with Microsoft's Visual Studio Team Services collaboration platform. I implemented the command parser to trigger actions using a context-free grammar. I also worked on a multi-tenent service on Azure that spawned our chatbot instances. </p>
+				</div>
+			</div>
+		</div>
+		<div class="work-wrapper">
+			<div class="work-logo">
+				<img src="/assets/img/blackberry.png">
+			</div>
+			<div class="work-content">
+				<div class="work-title">
+					<a href="https://ca.blackberry.com">BlackBerry</a>
+				</div>
+				<div class="work-location">
+					<p> Waterloo, ON </p>
+				</div>
+				<div class="work-description">
+					<p>I worked on the Tasks and Notes Android application team. I helped to implement the user interface for both applications as well as enhanced the content providers to properly sync items across devices and applications. </p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section class="photography" id="photography">
 		<h3 class="title">Photography </h3>
-		<p>The world's a pretty awesome place. Here are some pictures I've taken throughout my journeys!</p>
+		<p class="subtitle">The world's a pretty awesome place. Here are some pictures I've taken throughout my journeys!</p>
 		<hr>
 
 		<div class="gallery-wrapper">
@@ -59,9 +130,90 @@
 				<input type="radio" name="slide-btn" id="slide-1" onchange="radioButtonOnChange()" checked />
 				<input type="radio" name="slide-btn" id="slide-2" onchange="radioButtonOnChange()"/>
 				<input type="radio" name="slide-btn" id="slide-3" onchange="radioButtonOnChange()"/>
+				<input type="radio" name="slide-btn" id="slide-4" onchange="radioButtonOnChange()"/>
+				<input type="radio" name="slide-btn" id="slide-5" onchange="radioButtonOnChange()"/>
+				<input type="radio" name="slide-btn" id="slide-6" onchange="radioButtonOnChange()"/>
 				<div class="view">
 					<div class="slide-view">
 						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Timang Island.jpg" data-lightbox="gallery" data-title="Timang Island<p>Island off the beaches of Timang</p>"><img src="/assets/img/thumbs/Timang Island.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Sunny Afternoon.jpg" data-lightbox="gallery" data-title="Sunny Afternoon<p>Peaceful scenery reminiscent of slower times</p>"><img src="/assets/img/thumbs/Sunny Afternoon.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Hidden Isle.jpg" data-lightbox="gallery" data-title="Hidden Isle<p>Concealed paradise off the coast of Yogyakarta</p>"><img src="/assets/img/thumbs/Hidden Isle.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Borobudur Temple.jpg" data-lightbox="gallery" data-title="Borobudur Temple<p>Mystical Bhuddist temples of Yogyakarta</p>"><img src="/assets/img/thumbs/Borobudur Temple.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Cliffs of Merapi.jpg" data-lightbox="gallery" data-title="Cliffs of Merapi<p>Views from atop Merapi</p>"><img src="/assets/img/thumbs/Cliffs of Merapi.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Merbabu.jpg" data-lightbox="gallery" data-title="Merbabu<p>Merapi's sleeping brother</p>"><img src="/assets/img/thumbs/Merbabu.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide-view">
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Merapi.jpg" data-lightbox="gallery" data-title="Merapi<p>Most active volcano in Indonesia</p>"><img src="/assets/img/thumbs/Merapi.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Watchful Monkey.jpg" data-lightbox="gallery" data-title="Watchful Monkey<p>Monkey standing guard atop Merapi</p>"><img src="/assets/img/thumbs/Watchful Monkey.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Heaven Light.jpg" data-lightbox="gallery" data-title="Heaven Light<p>Light from above deep within Jomblang cave</p>"><img src="/assets/img/thumbs/Heaven Light.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Cavern.jpg" data-lightbox="gallery" data-title="Cavern<p>Descending into the darkness</p>"><img src="/assets/img/thumbs/Cavern.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Prambanan.jpg" data-lightbox="gallery" data-title="Prambanan<p>Temples dedicated to the Trimurti</p>"><img src="/assets/img/thumbs/Prambanan.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Grassy Views.jpg" data-lightbox="gallery" data-title="Grassy Views<p>Soothing views in Yogyakarta</p>"><img src="/assets/img/thumbs/Grassy Views.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide-view">
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Marina Bay Sands.jpg" data-lightbox="gallery" data-title="Marina Bay Sands<p>Iconic buildings of Singapore</p>"><img src="/assets/img/thumbs/Marina Bay Sands.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Singapore.jpg" data-lightbox="gallery" data-title="Singapore<p>Country or a city?</p>"><img src="/assets/img/thumbs/Singapore.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
 							<div class="col-sm-6 col-md-4">
 								<div class="photo">
 									<a href="/assets/img/full/Cliffs.jpg" data-lightbox="gallery" data-title="Cliffs<p>Cliffs off coast of Busan</p>"><img src="/assets/img/thumbs/Cliffs.jpg" class="hover-shadow"></a>
@@ -79,7 +231,21 @@
 							</div>
 							<div class="col-sm-6 col-md-4">
 								<div class="photo">
+									<a href="/assets/img/full/Sunrise Peak.jpg" data-lightbox="gallery" data-title="Sunrise Peak<p>Bold crater on Jeju island</p>"><img src="/assets/img/thumbs/Sunrise Peak.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide-view">
+						<div class="row">
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
 									<a href="/assets/img/full/Jeju City.jpg" data-lightbox="gallery" data-title="Jeju City<p>A city between the mountains</p>"><img src="/assets/img/thumbs/Jeju City.jpg" class="hover-shadow"></a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<div class="photo">
+									<a href="/assets/img/full/Hallasan Crags.jpg" data-lightbox="gallery" data-title="Hallasan Crags<p>Foggy cliffs of Hallasan</p>"><img src="/assets/img/thumbs/Hallasan Crags.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-4">
@@ -92,10 +258,6 @@
 									<a href="/assets/img/full/Songdo.jpg" data-lightbox="gallery" data-title="Songdo<p>A Smart City</p>"><img src="/assets/img/thumbs/Songdo.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="slide-view">
-						<div class="row">
 							<div class="col-sm-6 col-md-4">
 								<div class="photo">
 									<a href="/assets/img/full/Lotus.jpg" data-lightbox="gallery" data-title="Lotus<p>A solitary flower in a pond</p>"><img src="/assets/img/thumbs/Lotus.jpg" class="hover-shadow"></a>
@@ -106,6 +268,10 @@
 									<a href="/assets/img/full/Figure.jpg" data-lightbox="gallery" data-title="Figure<p>An ominous figure in the fog</p>"><img src="/assets/img/thumbs/Figure.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="slide-view">
+						<div class="row">
 							<div class="col-sm-6 col-md-4">
 								<div class="photo">
 									<a href="/assets/img/full/Goldengate.jpg" data-lightbox="gallery" data-title="Goldengate<p>Warm lights off the Goldengate bridge</p>"><img src="/assets/img/thumbs/Goldengate.jpg" class="hover-shadow"></a>
@@ -126,10 +292,6 @@
 									<a href="/assets/img/full/Jellyfish.jpg" data-lightbox="gallery" data-title="Jellyfish<p>A shocking display of colors</p>"><img src="/assets/img/thumbs/Jellyfish.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="slide-view">
-						<div class="row">
 							<div class="col-sm-6 col-md-4">
 								<div class="photo">
 									<a href="/assets/img/full/Butterfly.jpg" data-lightbox="gallery" data-title="Butterfly<p>A resting butterfly</p>"><img src="/assets/img/thumbs/Butterfly.jpg" class="hover-shadow"></a>
@@ -140,6 +302,10 @@
 									<a href="/assets/img/full/Napa Valley.jpg" data-lightbox="gallery" data-title="Napa Valley<p>The scenic Napa Valley</p>"><img src="/assets/img/thumbs/Napa Valley.jpg" class="hover-shadow"></a>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="slide-view">
+						<div class="row">
 							<div class="col-sm-6 col-md-4">
 								<div class="photo">
 									<a href="/assets/img/full/Leaves.jpg" data-lightbox="gallery" data-title="Leaves<p>Truly autumn in Montreal</p>"><img src="/assets/img/thumbs/Leaves.jpg" class="hover-shadow"></a>
@@ -152,6 +318,9 @@
 					<label for="slide-1" class="nav-dot" id="slide-dot-1"></label>
 					<label for="slide-2" class="nav-dot" id="slide-dot-2"></label>
 					<label for="slide-3" class="nav-dot" id="slide-dot-3"></label>
+					<label for="slide-4" class="nav-dot" id="slide-dot-4"></label>
+					<label for="slide-5" class="nav-dot" id="slide-dot-5"></label>
+					<label for="slide-6" class="nav-dot" id="slide-dot-6"></label>
 				</div>
 			</div>
 		</div>
@@ -168,7 +337,7 @@
 
 	<section class="contact" id="contact">
 		<h3 class="title">Want to get in touch?</h3>	
-		<p>Let me know what you're thinking, or if you have some comments/feedback for me! </p>
+		<p class="subtitle">Comments, questions, concerns, plans for world domination? Let me know what you're thinking! </p>
 		<hr>
 
 		<div class="contact-form-wrapper">

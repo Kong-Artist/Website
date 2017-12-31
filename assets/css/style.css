@@ -40,6 +40,17 @@ a.btn{
 	text-align: center;
 }
 
+p {
+	text-align: left;
+	font-family: 'Quicksand', sans-serif;
+}
+
+p.subtitle {
+	text-align: center;
+	margin-bottom: 35px;
+	line-height: 2;
+}
+
 hr {
 	width: 150px;
 	height: 2px;
@@ -74,13 +85,6 @@ section h3.title{
 	text-align: center;
 }
 
-section p{
-	max-width: 800px;
-	margin-bottom: 35px;
-	padding: 0 20px;
-	line-height: 2;
-}
-
 @media (max-width: 75em){
 	
 	section{
@@ -100,8 +104,7 @@ section p{
 		margin-bottom: 30px;
 	}
 
-	section p {
-		/* text-align: center; */
+	p.subtitle {
 		margin-bottom: 30px;
 	}
 
@@ -131,7 +134,7 @@ section p{
 		margin-bottom: 20px;
 	}
 
-	section p {
+	p.subtitle {
 		margin-bottom: 20px;
 	}
 
@@ -160,8 +163,7 @@ section p{
 		margin-bottom: 20px;
 	}
 
-	section p {
-		text-align: center;
+	p.subtitle {
 		margin-bottom: 20px;
 	}
 
@@ -260,6 +262,62 @@ header nav li:last-child{
 		font-size: 90%;
 	}
 }
+/*--------------------
+	Work Section
+---------------------*/
+
+.work > p:first {
+	text-align: center;
+}
+
+.work-wrapper {
+	display: flex;
+	flex-direction: row;
+	margin: 20px 0;
+}
+
+.work-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1em 4em;
+	background-color: #ECF0F1;
+	height: 18vw;
+	width: 20vw;
+	border-radius: 30px;
+}
+
+.work-logo img {
+	max-width: 15vw;
+}
+
+.work-content {
+	display: flex;
+	justify-content: center;
+	width: 45vw;
+	flex-direction: column;
+}
+
+/* .work-content div{
+	margin: .4em 0;
+} */
+
+.work-title {
+	color: #2980B9;
+	cursor: pointer;
+	font-size: 150%;
+	margin-bottom: .5em;
+}
+
+.work-location{
+	letter-spacing: -0.02em;
+	font-weight: bolder;
+	margin-bottom: .3em;
+}
+
+.work-description {
+	line-height: 1.5;
+}
 
 /*--------------------
 	Photography Section
@@ -268,12 +326,6 @@ header nav li:last-child{
 .photography {
 	background-color: #ECF0F1;
 }
-
-p {
-	text-align: left;
-	font-family: 'Quicksand', sans-serif;
-}
-
 
 .gallery-wrapper {
 	position: relative;
@@ -389,7 +441,9 @@ p {
 .gallery-wrapper input#slide-1:checked ~ .nav-dots label#slide-dot-1,
 .gallery-wrapper input#slide-2:checked ~ .nav-dots label#slide-dot-2,
 .gallery-wrapper input#slide-3:checked ~ .nav-dots label#slide-dot-3,
-.gallery-wrapper input#slide-4:checked ~ .nav-dots label#slide-dot-4{
+.gallery-wrapper input#slide-4:checked ~ .nav-dots label#slide-dot-4,
+.gallery-wrapper input#slide-5:checked ~ .nav-dots label#slide-dot-5,
+.gallery-wrapper input#slide-6:checked ~ .nav-dots label#slide-dot-6{
 	background: rgba(0, 0, 0, 0.6);
 }
 
@@ -414,7 +468,6 @@ p {
 .view {
 	white-space: nowrap;
 	width: 400vw;
-	overflow: scroll;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
@@ -481,6 +534,11 @@ p {
 .about .content h3 {
 	font-family: 'Lucida Console', monospace;
 	text-transform: lowercase;
+}
+
+.about .content p {
+	margin-bottom: 35px;
+	line-height: 2;
 }
 
 @media screen and (max-width: 52em) {
